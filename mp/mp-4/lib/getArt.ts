@@ -23,7 +23,7 @@ export default async function getArt(): Promise<ArtProps[] | undefined | null> {
         }
 
 
-        const filteredrecords = jsonRes.records.filter((r: any) =>
+        const filteredrecords = jsonRes.records.filter((r: unknown) =>
         r.primaryimageurl
         );
 
@@ -46,7 +46,7 @@ export default async function getArt(): Promise<ArtProps[] | undefined | null> {
         const uniqueRecords = Array.from(uniqueRecordsMap.values());
 
         const result: ArtProps[] =
-            uniqueRecords.map((art: any) => (
+            uniqueRecords.map((art: unknown) => (
                 {
                     id:art.objectid,
                     image: art.primaryimageurl,
