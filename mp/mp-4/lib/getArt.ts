@@ -34,7 +34,7 @@ export default async function getArt(): Promise<ArtProps[] | undefined | null> {
         
         if (!filteredrecords) { return null; }
 
-        const uniqueRecordsMap = new Map<number, any>();
+        const uniqueRecordsMap = new Map<number, unknown>();
 
         for (const art of filteredrecords) {
             const key = art.description;
