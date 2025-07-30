@@ -60,7 +60,7 @@ export default function ArtGallery({ arts }: { arts: ArtProps[]}) {
             {
                 arts.map((art) => (
                     <SingleCharDiv key={art.id}>
-                        <img src={art.image} alt="${art.title} picture" />
+                        <img src={art.image} alt={`${art.title} picture`}/> {/* TA-NOTE: fixed alt text syntax */}
                         <h1>{art.title}</h1>
                         <p>{art.description}</p>
                     </SingleCharDiv>
